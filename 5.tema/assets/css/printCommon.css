@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a img {
+  border: none;
+}
+
+body {
+  background-color: #FFF;
+  color: #111;
+  font-size: 13pt;
+}
+
+#all {
+  padding: 12pt 3%;
+  overflow-x: hidden;
+}
+
+.clear {
+  clear: both;
+}
+
+#actividad {
+  position: relative;
+  text-align: center;
+}
+
+.datosActividad {
+  font-size: 11px;
+  padding: 4pt 1.5% 0 0;
+  text-align: right;
+}
+
+.logo {
+  float: left;
+  padding: 3pt 0 0 1.5%;
+  display: none;
+}
+
+#header {
+  padding: 1pt 0 20pt;
+}
+
+h1 {
+  font: bold 18px/20px;
+  padding-bottom: 2px;
+  float: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: #618a2c;
+}
+
+#txtTitAct, #nombreAutor {
+  color: #618a2c;
+}
+
+#textoAutor {
+  margin-right: 4px;
+}
+
+.botoneraInteractiva {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.botoneraInteractiva .botonGenerico {
+  margin: 0;
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 35rem) {
+  .botoneraInteractiva {
+    flex-direction: row;
+    margin: 0;
+    justify-content: center;
+    align-items: inherit;
+  }
+  .botoneraInteractiva .botonGenerico:first-child {
+    margin-right: 1rem;
+  }
+}
+@media print {
+  header, .botoneraInteractiva {
+    display: none;
+  }
+  .logo {
+    display: block;
+  }
+  .footer__superior, .footer__inferior {
+    display: none;
+  }
+}

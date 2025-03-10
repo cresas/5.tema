@@ -1,0 +1,214 @@
+body {
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+}
+
+.content > * {
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  color: #333;
+  min-height: 100%;
+  font-size: 75%;
+  -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+  padding: 5px 2em 50px;
+}
+
+img {
+  max-width: 100%;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+input[type=text] {
+  outline: 0;
+  border: 0;
+  font-family: inherit;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: center;
+  color: #64A311;
+  box-shadow: inset 1px 1px 0 #666, inset 0 0 0 1px #DDD, inset 0 0 0 0 transparent;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  padding: 0;
+  min-width: 30px;
+  height: 44px;
+}
+input[type=text]:focus, input[type=text]:hover {
+  border: 2px solid #64A311;
+  transition: all 0.2s ease;
+}
+input[type=radio], input[type=checkbox] {
+  cursor: pointer;
+  border: 0px;
+  min-width: 1.75em;
+  width: 1.75em;
+  height: 1.75em;
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 50%;
+  border-spacing: 4px;
+  appearance: none;
+  outline: none;
+  transition: border 0.2s ease;
+}
+input[type=radio]:checked, input[type=checkbox]:checked {
+  background-color: #83d41e;
+}
+
+*[contenteditable=true] {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: 0;
+  color: #64A311;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-align: center;
+  cursor: text;
+  min-width: 9em;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  margin: 0 3px;
+  border-radius: 6px;
+}
+*[contenteditable=true]:empty::before {
+  content: "" !important;
+  display: none !important;
+}
+*[contenteditable=true]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 1px 1px 0 #666, inset 0 0 0 1px #DDD, inset 0 0 0 0 transparent;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+*[contenteditable=true]:hover::after, *[contenteditable=true]:focus::after {
+  box-shadow: inset 2px 2px 0 transparent, inset 0 0 0 0 transparent, inset 0 0 0 2px #64A311;
+  transition: all 0.2s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gameboard {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: baseline;
+  align-items: baseline;
+  flex-direction: column;
+  padding: 0 0 5em;
+  page-break-inside: avoid;
+}
+.gameboard:last-child {
+  padding: 0;
+}
+.gameboard__heading {
+  position: relative;
+  margin: 0 7%;
+  width: 85%;
+  height: auto;
+  gap: 30px;
+  margin-bottom: 5px;
+  border-radius: 16px;
+  page-break-inside: avoid;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: white;
+  border: 2px solid #ddd;
+}
+.gameboard__heading__qr {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  margin-top: -40%;
+  display: block;
+  width: 92px;
+  height: 92px;
+}
+.gameboard__heading__info {
+  position: relative;
+  display: block;
+  padding: 10px;
+  margin-left: 5px;
+}
+.gameboard__heading__info__ico {
+  position: absolute;
+  left: -5px;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  margin-top: 10px;
+}
+.gameboard__heading__info a {
+  font-weight: 700;
+}
+.gameboard__heading__info h1 {
+  font-size: 13px;
+  padding-bottom: 2px;
+}
+.gameboard__heading__info h2 {
+  font-size: 25px;
+}
+.gameboard__heading__info h2 a {
+  font-size: 0.75em;
+  padding: 0 5px;
+}
+.gameboard__heading__info h1,
+.gameboard__heading__info h2,
+.gameboard__heading__info h5 {
+  line-height: 1.1;
+  color: #666;
+  font-weight: 700;
+}
+.gameboard__heading__info h5,
+.gameboard__heading__info p {
+  font-size: 0.875em;
+  color: #666;
+}
+.gameboard__heading__info h5 {
+  padding-top: 2.5px;
+}
+.gameboard__heading__info__author {
+  padding-top: 2px;
+}
+.gameboard__heading__info > h5 {
+  padding-bottom: 10px;
+}
+.gameboard__heading__info__wrapper {
+  position: relative;
+  left: 8%;
+  width: 80%;
+}
+.gameboard__heading__btn {
+  display: none;
+}
+.gameboard__heading button {
+  min-width: 48px;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.gameboard__heading button img {
+  width: 22px;
+  height: inherit;
+}
+
+h2 a {
+  display: none;
+}
